@@ -1,0 +1,93 @@
+<template name="navigation">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+
+            <!-- Close canvas menu used only on OffCanvas page -->
+            <!-- You can remove this tag if you dont use offCanvas menu -->
+            <a class="close-canvas-menu"><i class="fa fa-times"></i></a>
+            <!-- End offCanvas menu toggle -->
+
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li class="{{isActivePath regex='/profile2'}}"><a href="profile2">Profile</a></li>
+                            <li class="{{isActivePath regex='/chatView'}}"><a href="chatView">Chat view</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="{{isActivePath regex='/dashboard3'}}">
+                    <a href="dashboard3"><i class="fa fa-th-large"></i> <span class="nav-label" data-i18n="nav.dashboard3">Dashboards</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse {{isActivePath regex='dashboard3' className='in'}}">
+                        <li class="{{isActivePath regex='/dashboard3'}}"><a href="dashboard3">Dashboard 3</a></li>
+                        <li class="{{isActivePath regex='/agileBoard'}}"><a href="agileBoard">Agile board</a></li>
+                    </ul>
+                </li>
+                <li class="{{isActivePath regex='autocomplete|formBasic|formAdvanced|formWizard|formUpload'}}">
+                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label" data-i18n="nav.forms">Forms</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse {{isActivePath regex='autocomplete|formBasic|formAdvanced|formWizard|formUpload' className='in'}}">
+                        <li class="{{isActivePath regex='/formBasic'}}"><a href="formBasic">Basic form</a></li>
+                        <li class="{{isActivePath regex='/formAdvanced'}}"><a href="formAdvanced">Advanced Plugins</a></li>
+                        <li class="{{isActivePath regex='/formWizard'}}"><a href="formWizard">Wizard</a></li>
+                        <li class="{{isActivePath regex='/formUpload'}}"><a href="formUpload">File Upload</a></li>
+                        <li class="{{isActivePath regex='/autocomplete'}}"><a href="autocomplete">Autocomplete</a></li>
+                        <li><a href="login">Login</a></li>
+                        <li><a href="forgotPassword">Forgot password</a></li>
+                        <li><a href="lockScreen">Lockscreen</a></li>
+                        <li class="{{isActivePath regex='/fileManager'}}"><a href="fileManager">File manager</a></li>
+                        <li class="{{isActivePath regex='/passwordMeter'}}"><a href="passwordMeter">Password meter</a></li>
+                        <li class="{{isActivePath regex='/validation'}}"><a href="validation">Validation</a></li> 
+                        <li class="{{isActivePath regex='/socialButtons'}}"><a href="socialButtons">Social buttons</a></li>
+                    </ul>
+                </li>
+                <li class="{{isActivePath regex='/fileManager'}}">
+                    <a href="fileManager"><i class="fa fa-desktop"></i> <span class="nav-label" data-i18n="nav.appviews">File manager</span>  <span class="pull-right label label-primary">SPECIAL</span></a>
+                    <ul class="nav nav-second-level collapse {{isActivePath regex='fileManager' className='in'}}">
+                        <li class="{{isActivePath regex='/fileManager'}}"><a href="fileManager">File manager</a></li>
+                        <li class="{{isActivePath regex='/pdfViewer'}}"><a href="pdfViewer">PDF Viewer</a></li>
+                    </ul>
+                </li>
+                <li class="{{isActivePath regex='searchResult|invoice|emptyPage'}}">
+                    <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label" data-i18n="nav.otherpages">Other Pages</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse {{isActivePath regex='searchResult|invoice|emptyPage' className='in'}}">
+                        <li><a href="errorOne">404 Page</a></li>
+                        <li><a href="errorTwo">500 Page</a></li>
+                    </ul>
+                </li>
+                <li class="{{isActivePath regex='passwordMeter|pdfViewer|i18support|tour|truncate|loadingButtons|masonry|toastrNotification|nestableList|agileBoard|timelineTwo|diff|liveFavicon|modalWindow|forumView|treeView|chatView|helperClasses|typography|icons|buttons|notifications|badgesLabels|tabs'}}">
+                    <a href="#"><i class="fa fa-globe"></i> <span class="nav-label" data-i18n="nav.miscellaneous">Miscellaneous</span><span class="label label-info pull-right">NEW</span></a>
+                    <ul class="nav nav-second-level collapse {{isActivePath regex='helperClasses|typography|icons|draggable|buttons|video|notifications|badgesLabels|pdfViewer|i18support|loadingButtons|masonry|toastrNotification|nestableList|timelineTwo|diff|liveFavicon|modalWindow|forumView|validation|chatView' className='in'}}">
+                        <li class="{{isActivePath regex='/toastrNotification'}}"><a href="toastrNotification">Notification</a></li>
+                        <li class="{{isActivePath regex='/i18support'}}"><a href="i18support">i18 support</a></li>
+                        <li class="{{isActivePath regex='/loadingButtons'}}"><a href="loadingButtons">Loading buttons</a></li>
+                        <li class="{{isActivePath regex='/typography'}}"><a href="typography">Typography</a></li>
+                        <li class="{{isActivePath regex='/icons'}}"><a href="icons">Icons</a></li>
+                        <li class="{{isActivePath regex='/buttons'}}"><a href="buttons">Buttons</a></li>
+                        <li class="{{isActivePath regex='/notifications'}}"><a href="notifications">Notifications & Tooltips</a></li>
+                        <li class="{{isActivePath regex='/helperClasses'}}"><a href="helperClasses">Helper css classes</a></li>
+                        <li class="{{isActivePath regex='/badgesLabels'}}"><a href="badgesLabels">Badges, Labels, Progress</a></li>
+                    </ul>
+                </li>
+                <li class="{{isActivePath regex='payments|productsGrid|orders'}}">
+                    <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label" data-i18n="nav.ecommerce">Billing</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level {{isActivePath regex='shopingCart|productDetail|payments|productsGrid|productsList|productEdit|orders' className='in'}}">
+                        <li class="{{isActivePath regex='/payments'}}"><a href="payments">Credit Card form</a></li>
+                        <li class="{{isActivePath regex='/pdfViewer'}}"><a href="pdfViewer">PDF Viewer</a></li>
+                        <li class="{{isActivePath regex='/invoice'}}"><a href="invoice">Invoice</a></li>
+                    </ul>
+                </li>                   
+            </ul>
+
+        </div>
+    </nav>
+</template>
